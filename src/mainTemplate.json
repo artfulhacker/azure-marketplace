@@ -4,27 +4,23 @@
   "parameters": {
     "artifactsBaseUrl": {
       "type": "string",
-      "defaultValue": "https://raw.githubusercontent.com/elastic/azure-marketplace/master/src",
+      "defaultValue": "https://raw.githubusercontent.com/elastic/azure-marketplace/feature/5.2.0/src",
       "metadata": {
         "artifactsBaseUrl": "Base URL of the Elastic template gallery package"
       }
     },
     "esVersion": {
       "type": "string",
-      "defaultValue": "5.1.2",
+      "defaultValue": "5.2.0",
       "allowedValues": [
         "2.0.2",
         "2.1.2",
-        "2.2.0",
-        "2.3.2",
-        "2.3.3",
-        "2.3.4",
+        "2.2.2",
         "2.3.5",
-        "2.4.0",
-        "2.4.1",
+        "2.4.4",
         "5.0.2",
-        "5.1.1",
-        "5.1.2"
+        "5.1.2",
+        "5.2.0"
       ],
       "metadata": {
         "description": "Elasticsearch version to install"
@@ -676,16 +672,12 @@
     "esToKibanaMapping": {
       "2.0.2": "4.2.2",
       "2.1.2": "4.3.3",
-      "2.2.0": "4.4.2",
-      "2.3.2": "4.5.4",
-      "2.3.3": "4.5.4",
-      "2.3.4": "4.5.4",
+      "2.2.2": "4.4.2",
       "2.3.5": "4.5.4",
-      "2.4.0": "4.6.1",
-      "2.4.1": "4.6.1",
+      "2.4.4": "4.6.4",
       "5.0.2": "5.0.2",
-      "5.1.1": "5.1.1",
-      "5.1.2": "5.1.2"
+      "5.1.2": "5.1.2",
+      "5.2.0": "5.2.0"
     },
     "esSettings": {
       "clusterName": "[parameters('esClusterName')]",
