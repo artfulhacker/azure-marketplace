@@ -744,20 +744,11 @@
     },
     "networkTemplateUrl": "[concat(variables('templateBaseUrl'), 'networks/', variables('networkOptions')[parameters('vNetNewOrExisting')][parameters('loadBalancerType')],'.json')]",
     "loadBalancerOptions": {
-      "internal": {
-        "Standard": "internal-lb-resources",
-        "WAF": "internal-lb-resources"
-      },
-      "external": {
-        "Standard": "external-lb-resources",
-        "WAF": "external-lb-resources"
-      },
-      "gateway": {
-        "Standard": "standard-application-gateway-resources",
-        "WAF": "waf-application-gateway-resources"
-      }
+      "internal": "internal-lb-resources",
+      "external": "external-lb-resources",
+      "gateway": "[concat(toLower(parameters('appGatewayTier')),'-application-gateway-resources')]"
     },
-    "loadBalancerTemplateUrl": "[concat(variables('templateBaseUrl'), 'loadbalancers/', variables('loadBalancerOptions')[parameters('loadBalancerType')][parameters('appGatewayTier')],'.json')]",
+    "loadBalancerTemplateUrl": "[concat(variables('templateBaseUrl'), 'loadbalancers/', variables('loadBalancerOptions')[parameters('loadBalancerType')],'.json')]",
     "osSettingsTemplateUrl": "[concat(variables('templateBaseUrl'), 'settings/ubuntuSettings.json')]",
     "locationMap": {
       "ResourceGroup": "[resourceGroup().location]",
